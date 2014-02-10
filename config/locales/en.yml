@@ -1,0 +1,23 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  activerecord:
+    attributes:
+      audit:
+        created_at: "@ %{datetime}"
+  actions: "Actions"
+  audit:
+    action: "Action"
+    actions:
+      create: "Created"
+      update: "Updated"
+      destroy: "Deleted"
+    author: "Changed by"
+    changes:
+      attribute:  "Changed"
+      from:       "From"
+      to:         "To"
+    changes_made: "Changes Made"
+    system_username: "System"
+    view_more_details: 'more details'

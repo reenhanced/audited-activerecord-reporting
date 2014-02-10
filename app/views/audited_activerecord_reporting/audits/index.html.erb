@@ -1,0 +1,22 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Date
+        <th>Change
+        <th></th>
+      </tr>
+      <tbody>
+      <% @audits.each do |audit| %>
+        <tr id="audit-row-<%= audit.id %>">
+          <td class="created-at"><%= audit.author %></td>
+          <td><%= audit.changes %></td>
+          <td>
+            <button class="btn btn-small btn-info right" type="button" data-toggle="collapse" data-target="#audit_<%= audit.id %>">
+              <%= t('audit.view_more_details') %>
+            </button>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+</div>

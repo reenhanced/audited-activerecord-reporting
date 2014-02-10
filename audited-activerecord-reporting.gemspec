@@ -14,11 +14,12 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/reenhanced/audited-activerecord-reporting"
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2.16"
   s.add_dependency "audited-activerecord", "~> 3.0"
+  s.add_dependency "draper", '~> 1.3'
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "bundler", "~> 1.3"
