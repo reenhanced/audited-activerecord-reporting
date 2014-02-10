@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount AuditedActiverecordReporting::Engine => "/audited-activerecord-reporting"
+  mount AuditedActiverecordReporting::Engine => "/audits"
 end
