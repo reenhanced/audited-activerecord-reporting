@@ -7,10 +7,14 @@ module AuditedActiverecordReporting
         @audits = AuditDecorator.decorate_collection(Audit.with_associated_for(@resource)).select do |audit_presenter|
           audit_presenter.visible?
         end
+        view_lookup_path = "#{@resource.class.to_s.underscore.plural}/audits/index"
+        render view_lookup_path if lookup_context.template_exists?(view_lookup_path)
       else
         @audits = AuditDecorator.decorate_collection(Audit.all).select do |audit_presenter|
           audit_presenter.visible?
         end
+
+        render "/audits/index" if lookup_context.template_exists?("/audits/index")
       end
     end
 
